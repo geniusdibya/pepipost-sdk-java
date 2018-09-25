@@ -111,103 +111,97 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
      ![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-### 3. Write sample code
+3. Getting started with code
 
-Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with a ``` main ``` method. This is the entry point for the execution of the created project.
-Here, you can add code to initialize the client library and instantiate a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
+   * Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with a ``` main ``` method. 
+   * This is the entry point for the execution of the created project.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject2&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+     ![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject2&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-## How to Test
-
-The generated code and the server can be tested using automatically generated test cases. 
-JUnit is used as the testing framework and test runner.
-
-In Eclipse, for running the tests do the following:
-
-1. Select the project *PepipostLib* from the package explorer.
-2. Select "Run -> Run as -> JUnit Test" or use "Alt + Shift + X" followed by "T" to run the Tests.
-
-## Initialization
-
-### 
-
-API client can be initialized as following.
+<a name="eg"></a>
+## Sample Usage
 
 ```java
+package testApp.SimpleConsoleApp;
+import com.pepipost.api.*;
+import com.pepipost.api.models.*;
+import com.pepipost.api.controllers.*;
+import com.pepipost.api.http.client.*;
+import java.util.*;
+import java.io.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
-PepipostClient client = new PepipostClient();
-```
+public class App {
 
+    public static void main(String[] args) throws JsonProcessingException {
 
-# Class Reference
+        PepipostClient client = new PepipostClient();
 
-## <a name="list_of_controllers"></a>List of Controllers
+        EmailController emailController = client.getEmail();
+        String apiKey = "my-api-here";
+        EmailBody body = new EmailBody();
 
-* [EmailController](#email_controller)
+        body.setPersonalizations(new LinkedList<Personalizations>());
+        Personalizations body_personalizations_0 = new Personalizations();
 
-## <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png "com.pepipost.api.controllers.EmailController") EmailController
+        body_personalizations_0.setRecipient("your-rcpt_email@gmail.com");
+        body.getPersonalizations().add(body_personalizations_0);
+        body.setTags("tagsjava");
+        body.setFrom(new From());
 
-### Get singleton instance
+        body.getFrom().setFromEmail("my-verified-domain@m3m.in");
+        body.getFrom().setFromName("info");
+        body.setSubject("JAVA SDK");
+        body.setContent("Test mail ready to sent");
+        body.setSettings(new Settings());
 
-The singleton instance of the ``` EmailController ``` class can be accessed from the API Client.
+        body.getSettings().setFooter(0);
+        body.getSettings().setClicktrack(1);
+        body.getSettings().setOpentrack(1);
+        body.getSettings().setUnsubscribe(1);
+        
 
-```java
-EmailController email = client.getEmail();
-```
-
-### <a name="create_send_email_async"></a>![Method: ](https://apidocs.io/img/method.png "com.pepipost.api.controllers.EmailController.createSendEmailAsync") createSendEmailAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> This Endpoint sends emails with the credentials passed.
-
-
-```java
-void createSendEmailAsync(
-        final String apiKey,
-        final EmailBody body,
-        final APICallBack<SendEmailResponse> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| apiKey |  ``` Optional ```  | Generated header parameter. Example value ='5ce7096ed4bf2b39dfa932ff5fa84ed9ed8' |
-| body |  ``` Optional ```  | The body passed will be json format. |
-
-
-#### Example Usage
-
-```java
-try {
-    String apiKey = "api_key";
-    EmailBody body = new EmailBody();
-    // Invoking the API call with sample inputs
-    email.createSendEmailAsync(apiKey, body, new APICallBack<SendEmailResponse>() {
-        public void onSuccess(HttpContext context, SendEmailResponse response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+        emailController.createSendEmailAsync(apiKey, body, new APICallBack<SendEmailResponse>() {
+            public void onSuccess(HttpContext context, SendEmailResponse response) {
+                // TODO success callback handler
+            	System.out.print("Message :: " + response.getMessage() + "\n" + "Error :: " + response.getErrorInfo().getErrorMessage());
+            }
+            public void onFailure(HttpContext context, Throwable error) {
+            	System.out.print(context.getResponse());
+            }
+            
+         });
+    }
 }
+
 ```
+* Change your api-key and sending domain respectively
+  * **apikey** will be available under Login to Pepipost -> Settings -> Integration  
+  * **Sending Domain** will be available under Login to Pepiost -> Settings -> Sending Domains 
+  
+```
+  *Note :: Domains showing with Active status on Sending Domain dashboard are only allowed to send any sort of emails.* In case there are no Sending Domain added under your account, then first add the domain, get the DNS (SPF/DKIM) settings done and get it reviewed by our compliance team for approval. Once the domain is approved, it will be in ACTIVE status and will be ready to send any sort of emails. 
+```
+* Run your project
 
-#### Errors
+<a name="announcements"></a>
+# Announcements
 
-| Error Code | Error Description |
-|------------|-------------------|
-| 405 | Method not allowed |
+v2.5.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-java/releases/) for details.
 
+All updates to this library are documented in our [releases](https://github.com/pepipost/pepipost-sdk-java/releases). For any queries, feel free to reach out us at dx@pepipost.com
 
+<a name="roadmap"></a>
+## Roadmap
 
-[Back to List of Controllers](#list_of_controllers)
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/pepipost/pepipost-sdk-java/issues) and [pull requests](https://github.com/pepipost/pepipost-sdk-java/pulls). We would love to hear your feedback.
 
+<a name="about"></a>
+## About
+pepipost-sdk-ruby library is guided and supported by the [Pepipost Developer Experience Team](https://github.com/orgs/pepipost/teams/pepis/members) .
+This pepipost gem is maintained and funded by Pepipost Ltd. The names and logos for pepipost gem are trademarks of Pepipost Ltd.
 
+<a name="license"></a>
+## License
+This code library was semi-automatically generated by APIMATIC v2.0 and licensed under The MIT License (MIT).
 
