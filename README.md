@@ -15,12 +15,32 @@ The latest 2.5.0 version of this library provides is fully compatible with the l
 
 For any update of this library check [Releases](https://github.com/pepipost/pepipost-sdk-java/releases).
 
-## How to Build
+# Table of Content
+  
+* [Installation](#installation)
+* [Quick Start](#quick-start)
+* [Usage](#usage)
+* [Announcements](#announcements)
+* [Roadmap](#roadmap)
+* [About](#about)
+* [License](#license)
 
-The generated code uses a few Maven dependencies e.g., Jackson, UniRest,
-and Apache HttpClient. The reference to these dependencies is already
-added in the pom.xml file will be installed automatically. Therefore,
-you will need internet access for a successful build.
+<a name="installation"></a>
+# Installation
+
+<a name="prereq"></a>
+## Prerequisites
+* Java (latest recommended)
+* Java Maven Dependencies
+  * Jackson
+  * UniRest
+  * Apache HttpClient
+* Java Development Enviromment (IDE)
+
+<a name="quickstart"></a>
+## Quick Start
+
+This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The reference to these dependencies are added in pom.xml file which will be install automatically. Just need internet access for successful build.
 
 * In order to open the client library in Eclipse click on ``` File -> Import ```.
 
