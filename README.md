@@ -1,6 +1,19 @@
-# Getting started
+![pepipostlogo](https://pepipost.com/assets/img/pepipost-footLogo.png)
 
-Pepipost is a cloud-based SMTP relay service that delivers highly personalised transactional emails to the inbox within seconds of your customer’s transaction
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
+[![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
+
+# Official Java library :coffee: for [Pepipost](http://www.pepipost.com/?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK)
+
+This library contains methods for easily interacting with the Pepipost Email Sending API to send emails within few seconds.
+
+We are trying to make our libraries Community Driven- which means we need your help in building the right things in proper order we would request you to help us by sharing comments, creating new [issues](https://github.com/pepipost/pepipost-sdk-java/issues) or [pull requests](https://github.com/pepipost/pepipost-sdk-java/pulls).
+
+We welcome any sort of contribution to this library.
+
+The latest 2.5.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
+
+For any update of this library check [Releases](https://github.com/pepipost/pepipost-sdk-java/releases).
 
 ## How to Build
 
