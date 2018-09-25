@@ -199,8 +199,8 @@ If you are interested in the future direction of this project, please take a loo
 
 <a name="about"></a>
 ## About
-pepipost-sdk-ruby library is guided and supported by the [Pepipost Developer Experience Team](https://github.com/orgs/pepipost/teams/pepis/members) .
-This pepipost gem is maintained and funded by Pepipost Ltd. The names and logos for pepipost gem are trademarks of Pepipost Ltd.
+pepipost-sdk-java library is guided and supported by the [Pepipost Developer Experience Team](https://github.com/orgs/pepipost/teams/pepis/members) .
+This pepipost library is maintained and funded by Pepipost Ltd. The names and logos for pepipost gem are trademarks of Pepipost Ltd.
 
 <a name="license"></a>
 ## License
