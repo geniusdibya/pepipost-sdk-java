@@ -42,7 +42,7 @@ For any update of this library check [Releases](https://github.com/pepipost/pepi
 
 This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The reference to these dependencies are added in pom.xml file which will be install automatically. Just need internet access for successful build.
 
-* Download zip or get a clone for the pepipost repository using 
+* [Download zip](https://github.com/pepipost/pepipost-sdk-java/archive/master.zip) or get a clone for the pepipost repository using 
 
   ``` git clone https://github.com/pepipost/pepipost-sdk-java.git ```
 
@@ -62,23 +62,25 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
   ![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/java?step=import3&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-## How to Use
+### Usage of Pepipost library in project
 
-The following section explains how to use the Pepipost library in a new console project.
+1. Starting a new project
 
-### 1. Starting a new project
+   * Click the menu command ``` File > New > Project ```.
 
-For starting a new project, click the menu command ``` File > New > Project ```.
+    ![Add a new project in Eclipse](https://apidocs.io/illustration/java?step=createNewProject0&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-![Add a new project in Eclipse](https://apidocs.io/illustration/java?step=createNewProject0&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+   * Choose ``` Maven > Maven Project ```.
+   
+   * Click ``` Next ```.
 
-Next, choose ``` Maven > Maven Project ```and click ``` Next ```.
+    ![Create a new Maven Project - Step 1](https://apidocs.io/illustration/java?step=createNewProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-![Create a new Maven Project - Step 1](https://apidocs.io/illustration/java?step=createNewProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+   * Here, make sure to use the current workspace by choosing ``` Use default Workspace location ```, as shown in the picture below.
+   
+   * Click ``` Next ```.
 
-Here, make sure to use the current workspace by choosing ``` Use default Workspace location ```, as shown in the picture below and click ``` Next ```.
-
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/java?step=createNewProject2&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+    ![Create a new Maven Project - Step 2](https://apidocs.io/illustration/java?step=createNewProject2&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
 Following this, select the *quick start* project type to create a simple project with an existing class and a ``` main ``` method. To do this, choose ``` maven-archetype-quickstart ``` item from the list and click ``` Next ```.
 
