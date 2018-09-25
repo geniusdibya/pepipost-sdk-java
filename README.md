@@ -18,7 +18,8 @@ For any update of this library check [Releases](https://github.com/pepipost/pepi
   
 * [Installation](#installation)
 * [Quick Start](#quick-start)
-* [Usage](#usage)
+* [Usage of library in Project](#inproject)
+* [Sample Example](#eg)
 * [Announcements](#announcements)
 * [Roadmap](#roadmap)
 * [About](#about)
@@ -61,6 +62,7 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
   ![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/java?step=import3&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
+<a name="inproject"></a>
 ### Usage of Pepipost library in project
 
 1. Starting a new project
@@ -93,15 +95,21 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
      ![Create a new Maven Project - Step 4](https://apidocs.io/illustration/java?step=createNewProject4&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-### 2. Add reference of the library project
+2. Add reference of the library project
 
-The created Maven project manages its dependencies using its ``` pom.xml ``` file. In order to add a dependency on the *PepipostLib* client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. Opening the ``` pom.xml ``` file will render a graphical view on the cavas. Here, switch to the ``` Dependencies ``` tab and click the ``` Add ``` button as shown in the picture below.
+   * The created Maven project manages its dependencies using its ``` pom.xml ``` file.
+   * In order to add a dependency on the **PepipostLib** client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. 
+   * Opening the ``` pom.xml ``` file will render a graphical view on the canvas.
+   * Here, switch to the ``` Dependencies ``` tab.
+   * Click the ``` Add ``` button as shown in the picture below.
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/java?step=testProject0&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+     ![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/java?step=testProject0&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-Clicking the ``` Add ``` button will open a dialog where you need to specify Pepipost in ``` Group Id ``` and PepipostLib in the ``` Artifact Id ``` fields. Once added click ``` OK ```. Save the ``` pom.xml ``` file.
+   * Click the ``` Add ``` button will open a dialog where you need to specify Pepipost in ``` Group Id ``` and PepipostLib in the ``` Artifact Id ``` fields.
+   * Once added click ``` OK ```. 
+   * Save the ``` pom.xml ``` file.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
+     ![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
 ### 3. Write sample code
 
