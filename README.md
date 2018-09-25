@@ -30,12 +30,13 @@ For any update of this library check [Releases](https://github.com/pepipost/pepi
 
 <a name="prereq"></a>
 ## Prerequisites
-* Java (latest recommended)
+* Java version Oracle JDK 7, 8 or OpenJDK 7
 * Java Maven Dependencies
   * Jackson
   * UniRest
   * Apache HttpClient
-* Java Development Enviromment (IDE)
+* Java Development Enviromment (IDE).
+* A free account on [Pepipost](https://app.pepipost.com/index.php/signup/registeruser?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK). If you don't have a one, click here to signup and get 30,000 emails free every month.
 
 <a name="quickstart"></a>
 ## Quick Start
