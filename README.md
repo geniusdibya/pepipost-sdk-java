@@ -36,12 +36,12 @@ For any update of this library check [Releases](https://github.com/pepipost/pepi
   * UniRest
   * Apache HttpClient
 * Java Development Enviromment (IDE).
-* A free account on [Pepipost](https://app.pepipost.com/index.php/signup/registeruser?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK). If you don't have a one, click here to signup and get 30,000 emails free every month.
+* A free account on Pepipost. If you don't have a one, click [here]((https://app.pepipost.com/index.php/signup/registeruser?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK)) to signup and get 30,000 emails free every month.
 
 <a name="quickstart"></a>
 ## Quick Start
 
-This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The reference to these dependencies are added in pom.xml file which will be install automatically. Just need internet access for successful build.
+This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The reference to these dependencies are added in pom.xml file which will be installed automatically. Just need internet access for successful build.
 
 * [Download zip](https://github.com/pepipost/pepipost-sdk-java/archive/master.zip) or get a clone for the pepipost repository using 
 
@@ -78,7 +78,7 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
      ![Create a new Maven Project - Step 1](https://apidocs.io/illustration/java?step=createNewProject1&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-   * Here, make sure to use the current workspace by choosing ``` Use default Workspace location ```, as shown in the picture below.
+   * Here, make sure to use the current workspace by choosing ``` Use default Workspace location ```, as shown in the screenshot below.
    
    * Click ``` Next ```.
 
@@ -106,7 +106,7 @@ This Java library uses few Maven Dependencies ([mentioned above](#prereq)). The 
 
      ![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/java?step=testProject0&workspaceFolder=pepipost-Java&workspaceName=Pepipost&projectName=PepipostLib&rootNamespace=com.pepipost.api)
 
-   * Click the ``` Add ``` button will open a dialog where you need to specify Pepipost in ``` Group Id ``` and PepipostLib in the ``` Artifact Id ``` fields.
+   * Click the ``` Add ``` button. A dialog will open, where you need to specify Pepipost in ``` Group Id ``` and PepipostLib in the ``` Artifact Id ``` fields.
    * Once added click ``` OK ```. 
    * Save the ``` pom.xml ``` file.
 
